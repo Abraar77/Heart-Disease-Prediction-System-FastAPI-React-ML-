@@ -10,6 +10,7 @@ app.add_middleware(
     CORSMiddleware,
      allow_origins=[
         "https://sheen-prediction-bbcb.onrender.com/"
+        "https://sheen-prediction-bbcb.onrender.com"
     ],
     allow_credentials=False,
     allow_methods=["*"],
