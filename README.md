@@ -59,8 +59,8 @@ RTK Query
 React Toastify
 
 📁 Project Structure
+
 Heart/
-│
 ├── Backend/
 │   ├── app.py
 │   ├── model.py
@@ -73,11 +73,14 @@ Heart/
 │       │   ├── redux/
 │       │   ├── components/
 │       │   └── App.jsx
+│       │
 │       ├── tailwind.config.js
 │       └── vite.config.js
 │
 ├── venv/
 └── README.md
+> The project is structured with a clear separation between backend (ML + API) and frontend (React + Redux).
+
 
 ⚙️ How It Works
 
