@@ -20,7 +20,7 @@ app.add_middleware(
 model = pickle.load(open("heart_disease_model.pkl", "rb"))
 
 
-@app.post("/predict")
+@app.post("/predict_predict_post")
 def predict(patient: Patient):
     data = np.array([[
         patient.Age,

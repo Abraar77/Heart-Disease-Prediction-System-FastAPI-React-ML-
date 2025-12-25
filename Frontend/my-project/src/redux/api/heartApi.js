@@ -8,7 +8,7 @@ export const heartApi = createApi({
   endpoints: (builder) => ({
     predict: builder.mutation({
       query: (patientData) => ({
-        url: "/predict",
+        url: "/predict_predict_post",
         method: "POST",
         body: patientData,
       }),
