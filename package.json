@@ -1,0 +1,17 @@
+{
+  "name": "heart-disease-app",
+  "private": true,
+  "scripts": {
+    "backend": "cd Backend && \"..\\venv\\Scripts\\uvicorn.exe\" app:app --reload",
+    "frontend": "cd Frontend/my-project && npm run dev",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.11.2",
+    "react-redux": "^9.2.0",
+    "react-toastify": "^11.0.5"
+  }
+}
