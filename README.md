@@ -6,15 +6,17 @@ The project includes a trained ML model, a FastAPI backend, and a modern React f
 🚀 Features
 
 🧠 Machine Learning model for heart disease prediction using Logistic Regression 
-Accuracy: 94%
-     precision    recall  f1-score   support
+> The model achieves **94% accuracy** with a strong balance between precision and recall, indicating reliable heart disease prediction performance.
+## 📊 Model Evaluation (Classification Report)
 
-           0       0.92      1.00      0.96        33
-           1       1.00      0.86      0.92        21
+| Class | Precision | Recall | F1-Score | Support |
+|------:|----------:|-------:|---------:|--------:|
+| 0 (No Disease) | 0.92 | 1.00 | 0.96 | 33 |
+| 1 (Disease)    | 1.00 | 0.86 | 0.92 | 21 |
+| **Accuracy**   |      |      | **0.94** | 54 |
+| **Macro Avg**  | 0.96 | 0.93 | 0.94 | 54 |
+| **Weighted Avg** | 0.95 | 0.94 | 0.94 | 54 |
 
-    accuracy                           0.94        54
-   macro avg       0.96      0.93      0.94        54
-weighted avg       0.95      0.94      0.94        54
 
 
 ⚡ FastAPI backend with strict data validation (Pydantic)
