@@ -6,10 +6,10 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
-# ✅ MUST be before routes
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
+     allow_origins=[
+        "https://sheen-prediction-bbcb.onrender.com/"
         "https://sheen-prediction-bbcb.onrender.com"
     ],
     allow_credentials=True,
@@ -17,11 +17,13 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# load trained pipeline (scaler + model)
 model = pickle.load(open("heart_disease_model.pkl", "rb"))
 
+
 @app.post("/predict")
-async def predict(patient: Patient):
-    data = np.array([[ 
+def predict(patient: Patient):
+    data = np.array([[
         patient.Age,
         patient.ChestPainType,
         patient.RestingBP,
@@ -43,3 +45,7 @@ async def predict(patient: Patient):
         "prediction": int(prediction[0]),
         "probability": round(probability, 3)
     }
+
+
+
+
