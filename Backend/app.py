@@ -12,7 +12,7 @@ app.add_middleware(
         "https://sheen-prediction-bbcb.onrender.com/"
         "https://sheen-prediction-bbcb.onrender.com"
     ],
-    allow_credentials=False,
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
